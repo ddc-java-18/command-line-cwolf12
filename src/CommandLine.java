@@ -4,9 +4,15 @@ public class CommandLine
 		{
 			for (String arg:args)
 			{
-				System.out.println(arg);
+				double F = Double.parseDouble(arg);
+				double C = convertF2C(F);
+				System.out.printf("F = %.2f; C = %.2f%n", F, C);
 			}
-				
-			
 		}
+		
+	private static double convertF2C(double fahrenheit)
+	{
+		return 5/9d * (fahrenheit - 32);
+	}
+		
 }
